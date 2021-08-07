@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="canvas-area">
-      <canvas id="myCanvas" v-bind:class="{eraser: canvasMode === 'eraser'}" width="100%" height="100%" @mousedown="dragStart" @mouseup="dragEnd" @mouseout="dragEnd" @mousemove="draw"></canvas>
+      <canvas id="myCanvas" v-bind:class="{eraser: canvasMode === 'eraser'}" width="1900px" height="1000px" @mousedown="dragStart" @mouseup="dragEnd" @mouseout="dragEnd" @mousemove="draw"></canvas>
     </div>
     <div id="tool-area">
         <button id="pen-black-button" @click="penBlack" class="btn btn-sm btn-dark" v-shortkey="['ctrl','a']" @shortkey="penBlack">ペン（黒）</button>
@@ -19,15 +19,12 @@
 }
 
 #myCanvas {
- border: 1px solid #000000;
+ /* border: 1px solid #000000; */
  z-index: 100;
 
 
 }
 
-.eraser {
-    cursor: url("/images/eraser.png") 15 15,auto;
-}
 
 </style>
 
@@ -45,8 +42,8 @@ export default {
   },
   mounted(){
       this.canvas = document.querySelector('#myCanvas')
-    　this.canvas.setAttribute('width',window.innerWidth)
-    　this.canvas.setAttribute('height',window.innerHeight)
+    // 　this.canvas.setAttribute('width',window.innerWidth)
+    // 　this.canvas.setAttribute('height',window.innerHeight)
       this.context = this.canvas.getContext('2d')
       this.context.lineCap = 'round';
       this.context.lineJoin = 'round';

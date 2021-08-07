@@ -1,7 +1,7 @@
 <template>
     <div id="board">
         <VueDragResize  :aspectRatio="true" :isResizable="false" :isDraggable="false"  :preventActiveBehavior="true" >
-            <!-- <img src="/image/board.png" width="100%"> -->
+
             <!-- red -->
 
             <VueDragResize v-on:dragging="resize" :aspectRatio="true" :isResizable="false" :w="50" :h="50" :x="450" :y="480" >
@@ -60,12 +60,6 @@
 
     export default {
             
-        computed: {
-            red_width(){
-                let window_width = window.innerWidth 
-                return window_width /3
-            }
-        },
         
         
 
@@ -102,10 +96,13 @@
     }
 
     #board{
+        width: 1900px;
+        height:1000px;
         position:absolute;
         top:0;
-        background-size: cover;
+        background-size: contain;
         background-image: url("/image/board.png");
+    
     }
 
 </style>
