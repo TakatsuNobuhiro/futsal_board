@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="canvas-area">
-      <canvas id="myCanvas" v-bind:class="{eraser: canvasMode === 'eraser'}" width="1440px" height="700px" @mousedown="dragStart" @mouseup="dragEnd" @mouseout="dragEnd" @mousemove="draw"></canvas>
+      <canvas id="myCanvas" v-bind:class="{eraser: canvasMode === 'eraser'}" width="1440px" height="800px" @mousedown="dragStart" @mouseup="dragEnd" @mouseout="dragEnd" @mousemove="draw"></canvas>
     </div>
     <div id="tool-area">
         <button id="pen-black-button" @click="penBlack" class="btn btn-sm btn-dark" v-shortkey="['ctrl','a']" @shortkey="penBlack">ペン（黒）</button>

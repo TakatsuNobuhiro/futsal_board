@@ -20,7 +20,10 @@
             <a class="nav-link" href="/">トップページ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/board">戦術ボード</a>
+            <a class="nav-link" href="/board/3-1">3-1(回避）</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/board/4-0">4-0（回避）</a>
           </li>
         </ul>
       </div>

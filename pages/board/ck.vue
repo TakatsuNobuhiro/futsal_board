@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Board-3-1 />
+    <BoardCk />
+    
   </div>
 </template>
 

@@ -42,13 +42,13 @@
                         index:"r1",
                         name:"1",
                         x:330,
-                        y:355
+                        y:387
                     },
                     red_2:{
                         index:"r2",
                         name:"2",
                         x:410,
-                        y:100
+                        y:150
                     },
                     red_3:{
                         index:"r3",
@@ -60,13 +60,13 @@
                         index:"r4",
                         name:"4",
                         x:975,
-                        y:355,
+                        y:385,
                     },
                     red_g:{
                         index:"rG",
                         name:"G",
                         x:100,
-                        y:355
+                        y:387
                     }
                 },
                 blue_objects:{
@@ -74,7 +74,7 @@
                         index:"b1",
                         name:"1",
                         x:450,
-                        y:355
+                        y:387
                     },
                     blue_2:{
                         index:"b2",
@@ -86,24 +86,24 @@
                         index:"b3",
                         name:"3",
                         x:550,
-                        y:500
+                        y:520
                     },
                     blue_4:{
                         index:"b4",
                         name:"4",
                         x:1050,
-                        y:355
+                        y:387
                     },
                     blue_g:{
                         index:"bG",
                         name:"G",
                         x:1300,
-                        y:355
+                        y:387
                     },
                 },
                 ball:{
                     x:370,
-                    y:385
+                    y:410
                 }
             
             }
