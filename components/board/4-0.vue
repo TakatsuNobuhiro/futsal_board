@@ -3,7 +3,7 @@
         <VueDragResize  :aspectRatio="true" :isResizable="false" :isDraggable="false"  :preventActiveBehavior="true" >
 
             <!-- red -->
-            <VueDragResize v-for="red_object in red_objects" :key="red_object.id"  :aspectRatio="true" :isResizable="false" :w="37.7" :h="37.5" :x=red_object.x :y=red_object.y >
+            <VueDragResize v-for="red_object in red_objects" :key="red_object.index"  :aspectRatio="true" :isResizable="false" :w="37.7" :h="37.5" :x=red_object.x :y=red_object.y >
                 <div  class="of circle object">{{red_object.name}}</div>
             </VueDragResize>
 
@@ -112,8 +112,6 @@
         components: {
 
             VueDragResize
-        },mounted() {
-            console.log(window.innerWidth)
         }
 
 

@@ -57,7 +57,7 @@ export default {
     draw :function(e) {
       let x = e.layerX
       let y = e.layerY
- 
+
       if(!this.isDrag) {
         return;
       }

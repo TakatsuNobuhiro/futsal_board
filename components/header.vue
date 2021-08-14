@@ -25,6 +25,12 @@
           <li class="nav-item">
             <a class="nav-link" href="/board/4-0">4-0（回避）</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/board/ck">CK</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/board/pp">PP</a>
+          </li>
         </ul>
       </div>
     </nav>
