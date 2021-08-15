@@ -29,6 +29,10 @@ export default {
     {
       src: '~/plugins/vue-shortkey.js',
       mode: 'client',
+    },
+    {
+      src: '~/plugins/firebase.js',
+      mode: 'client',
     }
   ],
 
@@ -42,6 +46,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     'bootstrap-vue/nuxt',
+    '@nuxtjs/google-gtag',
     ['nuxt-fontawesome', {
       imports: [
         {
@@ -54,7 +59,10 @@ export default {
         }
       ]
     }]
-  ],
+  ], 'google-gtag': {
+    id: 'G-J2C83Q7XKN',
+    debug: true, // Enable to track in dev mode.
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

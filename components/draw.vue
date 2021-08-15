@@ -4,6 +4,7 @@
       <canvas id="myCanvas" v-bind:class="{eraser: canvasMode === 'eraser'}" width="1440px" height="800px" @mousedown="dragStart" @mouseup="dragEnd" @mouseout="dragEnd" @mousemove="draw"></canvas>
     </div>
     <div id="tool-area">
+        <button id="pen-black-button" @click="dragMode" class="btn btn-sm btn-secondary" v-shortkey="['ctrl','d']" @shortkey="dragMode">ドラッグモード</button>
         <button id="pen-black-button" @click="penBlack" class="btn btn-sm btn-dark" v-shortkey="['ctrl','a']" @shortkey="penBlack">ペン（黒）</button>
         <button id="pen-red-button" @click="penRed" class="btn btn-sm btn-danger" v-shortkey="['ctrl','r']" @shortkey="penRed">ペン（赤）</button>
         <button id="pen-blue-button" @click="penBlue" class="btn btn-sm btn-primary" v-shortkey="['ctrl','b']" @shortkey="penBlue">ペン（青）</button>
@@ -34,7 +35,7 @@ export default {
   name: "DrawTool",
   data() {
     return {
-        canvasMode: 'penBlack',
+        canvasMode: 'drag',
         canvas: null,
         context: null,
         isDrag: false
@@ -67,6 +68,10 @@ export default {
     },
     // 描画開始（mousedown）
     dragStart:function(e) {
+      if(this.canvasMode==="drag") {
+        return;
+      }
+ 
       let x = e.layerX
       let y = e.layerY
  
@@ -85,6 +90,10 @@ export default {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
     
+    },
+
+    dragMode: function(){
+      this.canvasMode = 'drag'
     },
     penBlack: function(){
       // カーソル変更
